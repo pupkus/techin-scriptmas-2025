@@ -1,0 +1,47 @@
+:root {
+  --before-content: "";
+  --after-content: "";
+}
+
+.rectangle {
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top left, #22c55e33, #0f172a);
+  font-weight: 600;
+}
+
+.rectangle::before,
+.rectangle::after {
+  position: absolute;
+  font-size: 0.75rem;
+  color: rgba(248, 250, 252, 0.8);
+}
+
+/* left side label (length) */
+.rectangle::before {
+  content: var(--before-content, "");
+  top: 50%;
+  left: -2.25rem;
+  transform: translateY(-50%);
+}
+
+/* bottom label (width) */
+.rectangle::after {
+  content: var(--after-content, "");
+  left: 50%;
+  bottom: -1.85rem;
+  transform: translateX(-50%);
+}
+
+.rectangle {
+  transition: width 0.3s ease, height 0.3s ease, background 0.5s ease;
+}
+
+.rectangle.resizing {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+  transform: scale(1.02);
+}

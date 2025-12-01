@@ -4,10 +4,22 @@
     <meta charset="UTF-8" />
     <title>Techin Coding challange</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./main.css" />
   </head>
-  <body class="bg-gray-900 text-white p-10">
-    <h1 class="text-3xl font-bold">Techin Coding challange</h1>
-    <div id="card-container" class="flex gap-8 flex-wrap justify-center bg-gray-900 py-10"></div>
+  <body class="relative bg-gray-900 text-white flex flex-col items-center justify-start lg:justify-center min-h-screen">
+    <!-- Blurred background image -->
+    <div class="fixed inset-0 -z-10">
+      <img src="./img/background.jpg" class="w-full h-full object-cover blur-sm" alt="" />
+    </div>
+
+    <!-- H1 with nice backdrop -->
+    <h1 class="block w-full text-3xl font-bold text-center bg-black/50 text-white px-4 p-4 backdrop-blur-sm">
+      Techin Coding challange
+    </h1>
+
+    <!-- Card container -->
+    <div id="card-container" class="arc-container flex gap-8 flex-wrap justify-center py-10"></div>
+
     <script type="module" src="./script.js"></script>
   </body>
 </html>

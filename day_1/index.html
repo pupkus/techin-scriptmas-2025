@@ -5,61 +5,12 @@
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-      :root {
-        --before-content: "";
-        --after-content: "";
-      }
-
-      .rectangle {
-        position: relative;
-        border: 2px solid rgba(255, 255, 255, 0.8);
-        border-radius: 0.75rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: radial-gradient(circle at top left, #22c55e33, #0f172a);
-        font-weight: 600;
-      }
-
-      .rectangle::before,
-      .rectangle::after {
-        position: absolute;
-        font-size: 0.75rem;
-        color: rgba(248, 250, 252, 0.8);
-      }
-
-      /* left side label (length) */
-      .rectangle::before {
-        content: var(--before-content, "");
-        top: 50%;
-        left: -2.25rem;
-        transform: translateY(-50%);
-      }
-
-      /* bottom label (width) */
-      .rectangle::after {
-        content: var(--after-content, "");
-        left: 50%;
-        bottom: -1.85rem;
-        transform: translateX(-50%);
-      }
-
-      .rectangle {
-        transition: width 0.3s ease, height 0.3s ease, background 0.5s ease;
-      }
-
-      .rectangle.resizing {
-        box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
-        transform: scale(1.02);
-      }
-    </style>
+    <link rel="stylesheet" href="./day.css" />
   </head>
 
   <body class="min-h-screen bg-slate-950 text-slate-50 flex flex-col items-center">
     <header class="w-full max-w-5xl px-4 pt-10">
-      <h1 id="page-title" class="text-3xl font-bold tracking-tight mb-2"></h1>
+      <h1 id="page-title" class="text-3xl font-bold"></h1>
     </header>
 
     <main class="w-full max-w-5xl px-4 pb-10 pt-6">
