@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     // ========= OUTPUT SETTINGS =========
-    "target": "ES6", // Modern JS output
+    "target": "es2024", // Modern JS output
     "module": "ESNext",
     "outDir": "./", // Output JS next to TS (root-level project)
     "rootDir": "./", // TS files can be anywhere

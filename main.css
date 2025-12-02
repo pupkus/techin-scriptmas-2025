@@ -13,13 +13,25 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-
+    padding: 4rem;
     transform: perspective(1000px) rotateX(5deg);
     animation: arcTilt 1s ease-out forwards;
   }
 
   body {
     overflow-x: hidden;
+  }
+
+  .background {
+    animation: bgZoom 12s ease-in-out infinite;
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 1023px) {
+  .nav-card {
+    flex: 0 0 350px; /* no grow, no shrink, fixed width */
+    min-height: 350px;
   }
 }
 
@@ -64,4 +76,9 @@
     rgba(0, 0, 0, 0.55) 100%
   );
   animation: vignettePulse 16s ease-in-out infinite;
+}
+
+.nav-card {
+  height: 150px;
+  width: 150px;
 }

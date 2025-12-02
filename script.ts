@@ -6,7 +6,7 @@ type NavigationItem = {
 
 const titleArray = [
   `Santa's Tiling Trouble`,
-  "TBA",
+  "Santa’s Midnight Clock Countdown",
   "TBA",
   "TBA",
   "TBA",
@@ -39,7 +39,7 @@ const cardContainer = document.getElementById("card-container");
 navigationItems.forEach((item) => {
   const card = document.createElement("div");
   card.className =
-    "relative overflow-hidden transform rounded-xl h-40 w-40 sm:h-48 sm:w-48 bg-white shadow-xl transition duration-300 hover:scale-105 cursor-pointer";
+    "nav-card relative overflow-hidden transform rounded-xl bg-white shadow-xl transition duration-300 hover:scale-105 cursor-pointer";
 
   card.style.backgroundImage = `url('${item.img}')`;
   card.style.backgroundSize = "cover";
@@ -53,11 +53,12 @@ navigationItems.forEach((item) => {
   link.className = "relative z-10 flex h-full w-full";
 
   const content = document.createElement("div");
-  content.className = "flex flex-col h-full w-full justify-center items-center text-white";
+  content.className =
+    "flex flex-col h-full w-full justify-center items-center text-white";
 
   const titleHeading = document.createElement("h4");
   titleHeading.className =
-    "block w-full font-bold text-center bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-md text-sm sm:text-base";
+    "block w-full font-bold text-center bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-md md:text-3xl sm:text-6xl lg:text-sm";
   titleHeading.textContent = item.title;
 
   content.appendChild(titleHeading);
