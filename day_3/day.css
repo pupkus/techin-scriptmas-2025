@@ -4,7 +4,7 @@
 
 .overlap {
   position: relative;
-  top: -142px; /* starting overlapped position */
+  top: -142px;
   transition: top 0.6s ease-out;
 }
 
@@ -29,4 +29,10 @@
 
 .shadow {
   box-shadow: 0 0 10px 10px rgba(16, 185, 129, 0.5) !important;
+}
+
+@media (max-width: 800px) {
+  .digit {
+    min-width: 50px;
+  }
 }
