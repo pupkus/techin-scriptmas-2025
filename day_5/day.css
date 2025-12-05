@@ -1,3 +1,13 @@
+@media (max-width: 600px) {
+  #santa-sleigh {
+    width: 150px;
+  }
+
+  #countdown-display {
+    scale: 0.8;
+  }
+}
+
 #countdown-text {
   position: relative;
   overflow: hidden;
