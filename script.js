@@ -41,7 +41,8 @@ navigationItems.forEach((item) => {
     link.href = item.link;
     link.className = "relative z-10 flex h-full w-full";
     const content = document.createElement("div");
-    content.className = "flex flex-col h-full w-full justify-center items-center text-white";
+    content.className =
+        "flex flex-col h-full w-full justify-center items-center text-white";
     const titleHeading = document.createElement("h4");
     titleHeading.className =
         "block w-full font-bold text-center bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-md md:text-3xl sm:text-6xl lg:text-sm";
@@ -56,7 +57,9 @@ export async function initiateMetadata() {
     const nav = document.querySelector("nav");
     if (!nav)
         return;
+    console.log(nav);
     const data = await fetch("../nav.html");
+    nav.classList.add("w-full", "py-6", "p-6", "bg-slate-900", "flex", "justify-between", "items-center", "text-center", "gap-4");
     nav.innerHTML = await data.text();
     const back = document.getElementById("back");
     const forward = document.getElementById("forward");

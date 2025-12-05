@@ -18,6 +18,10 @@ window.onload = () => {
     const button = document.getElementById("control-button");
     const countdownDiv = document.getElementById("countdown-display");
     const countdownText = document.getElementById("countdown-text");
+    countdownDiv.innerHTML = "10"
+        .split("")
+        .map((digit) => drawDigit(Number(digit)))
+        .join("");
     button.addEventListener("click", async () => {
         // prop setup for start
         countdownText.innerHTML = "";
@@ -74,7 +78,9 @@ window.onload = () => {
     }
     function drawLine(line) {
         const boxes = line.split("");
-        return boxes.map((char) => `<div class="box min-w-[12px] text-center">${char}</div>`).join(""); // seperate characters to boxes
+        return boxes
+            .map((char) => `<div class="min-w-[12px] box text-center">${char}</div>`)
+            .join(""); // seperate characters to boxes
     }
     function setCountdownPhrase(newText) {
         const existing = countdownText.querySelector(".countdown-phrase");

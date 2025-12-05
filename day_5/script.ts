@@ -20,8 +20,17 @@ window.onload = () => {
   const countdownMeter = 10;
 
   const button = document.getElementById("control-button") as HTMLButtonElement;
-  const countdownDiv = document.getElementById("countdown-display") as HTMLDivElement;
-  const countdownText = document.getElementById("countdown-text") as HTMLParagraphElement;
+  const countdownDiv = document.getElementById(
+    "countdown-display"
+  ) as HTMLDivElement;
+  const countdownText = document.getElementById(
+    "countdown-text"
+  ) as HTMLParagraphElement;
+
+  countdownDiv.innerHTML = "10"
+    .split("")
+    .map((digit) => drawDigit(Number(digit)))
+    .join("");
 
   button.addEventListener("click", async () => {
     // prop setup for start
@@ -30,12 +39,16 @@ window.onload = () => {
     button.classList.remove("bg-emerald-600", "hover:bg-emerald-500");
     button.classList.add("bg-gray-600");
     const dubArray = [...preperationText];
-    setCountdownPhrase(dubArray.splice(Math.floor(Math.random() * dubArray.length), 1)[0]);
+    setCountdownPhrase(
+      dubArray.splice(Math.floor(Math.random() * dubArray.length), 1)[0]
+    );
 
     for (let i = countdownMeter; i >= 0; i--) {
       if (i && i % 4 === 0 && dubArray.length) {
         // draw on every 4 seconds
-        setCountdownPhrase(dubArray.splice(Math.floor(Math.random() * dubArray.length), 1)[0]);
+        setCountdownPhrase(
+          dubArray.splice(Math.floor(Math.random() * dubArray.length), 1)[0]
+        );
       }
       const parseString = String(i);
       countdownDiv.innerHTML = parseString
@@ -81,18 +94,25 @@ window.onload = () => {
 
   function drawDigit(digit: number) {
     const lines = DIGITS[String(digit)]
-      .map((line: string) => `<div class="line flex justify-center">${drawLine(line)}</div>`) // draw line
+      .map(
+        (line: string) =>
+          `<div class="line flex justify-center">${drawLine(line)}</div>`
+      ) // draw line
       .join(""); // join lines for one digit
     return `<div class="digit">${lines}</div>`; // wrap whole digit
   }
 
   function drawLine(line: string) {
     const boxes = line.split("");
-    return boxes.map((char) => `<div class="box min-w-[12px] text-center">${char}</div>`).join(""); // seperate characters to boxes
+    return boxes
+      .map((char) => `<div class="min-w-[12px] box text-center">${char}</div>`)
+      .join(""); // seperate characters to boxes
   }
 
   function setCountdownPhrase(newText: string) {
-    const existing = countdownText.querySelector(".countdown-phrase") as HTMLSpanElement | null;
+    const existing = countdownText.querySelector(
+      ".countdown-phrase"
+    ) as HTMLSpanElement | null;
 
     // first time
     if (!existing) {

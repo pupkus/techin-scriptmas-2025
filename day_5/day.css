@@ -3,6 +3,10 @@
     width: 150px;
   }
 
+  .box {
+    min-width: 8px;
+  }
+
   #countdown-display {
     scale: 0.8;
   }
@@ -28,7 +32,8 @@
 
 .countdown-phrase.launch-effect {
   display: inline-block;
-  animation: launch-pop 0.5s ease-out forwards, launch-shake 0.4s ease-in-out 0.5s 4;
+  animation: launch-pop 0.5s ease-out forwards,
+    launch-shake 0.4s ease-in-out 0.5s 4;
 }
 
 #santa-sleigh {
