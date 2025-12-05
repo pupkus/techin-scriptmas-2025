@@ -2,7 +2,7 @@ const titleArray = [
     `Santa's Tiling Trouble`,
     "Santa’s Midnight Clock Countdown",
     "Santa’s Number-Trimming Magic",
-    "TBA",
+    "Gift Bag",
     "TBA",
     "TBA",
     "TBA",

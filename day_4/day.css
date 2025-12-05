@@ -1,0 +1,14 @@
+.price {
+  transition: width 1s ease, padding 1s ease, margin 1s ease, opacity 0.5s ease, border-width 1s ease,
+    box-shadow 0.5s ease;
+}
+
+/* middle digits collapsing away */
+.price-collapse {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 0 !important;
+  opacity: 0;
+  border-width: 0;
+  overflow: hidden;
+}
