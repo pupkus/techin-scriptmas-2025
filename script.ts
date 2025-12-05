@@ -7,9 +7,9 @@ type NavigationItem = {
 const titleArray = [
   `Santa's Tiling Trouble`,
   "Santa’s Midnight Clock Countdown",
-  "TBA",
-  "TBA",
-  "TBA",
+  "Santa’s Number-Trimming Magic",
+  "Gift Bag",
+  "Santa’s Magical ASCII Countdown",
   "TBA",
   "TBA",
   "TBA",
@@ -53,8 +53,7 @@ navigationItems.forEach((item) => {
   link.className = "relative z-10 flex h-full w-full";
 
   const content = document.createElement("div");
-  content.className =
-    "flex flex-col h-full w-full justify-center items-center text-white";
+  content.className = "flex flex-col h-full w-full justify-center items-center text-white";
 
   const titleHeading = document.createElement("h4");
   titleHeading.className =
