@@ -3,7 +3,7 @@ const titleArray = [
     "Santa’s Midnight Clock Countdown",
     "Santa’s Number-Trimming Magic",
     "Gift Bag",
-    "TBA",
+    "Santa’s Magical ASCII Countdown",
     "TBA",
     "TBA",
     "TBA",
