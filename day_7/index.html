@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kalėdinis TECHIN programavimo iššūkis 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" />
+    <link rel="stylesheet" href="./day.css" />
+  </head>
+
+  <body class="min-h-screen bg-slate-950 text-slate-50 flex flex-col items-center">
+    <nav></nav>
+
+    <main class="w-full max-w-5xl px-4 pb-10 pt-6">
+      <div id="assignment" class="flex flex-col w-full gap-8 items-start">
+        <!-- Form card -->
+        <section class="w-full bg-slate-900/60 border border-slate-800 rounded-2xl p-6 shadow-xl">
+          <h2 class="text-lg font-semibold mb-2">Inputs</h2>
+
+          <form id="form" class="space-y-4">
+            <!-- Top row: main inputs + compact advanced block -->
+            <div class="flex flex-col md:flex-row md:items-end gap-4">
+              <!-- Primary inputs -->
+              <div class="flex-1 flex flex-col md:flex-row gap-4">
+                <div class="flex-1">
+                  <label for="row-len" class="block text-sm font-medium text-slate-200"> First row seats </label>
+                  <input
+                    type="number"
+                    id="row-len"
+                    name="row-len"
+                    class="mt-1 p-2 rounded bg-gray-800 text-white w-full border border-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    min="1"
+                    value="2"
+                  />
+                </div>
+
+                <div class="flex-1">
+                  <label for="rows" class="block text-sm font-medium text-slate-200"> Rows </label>
+                  <input
+                    type="number"
+                    id="rows"
+                    name="rows"
+                    class="mt-1 p-2 rounded bg-gray-800 text-white w-full border border-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    min="1"
+                    value="10"
+                  />
+                </div>
+              </div>
+
+              <!-- Advanced / mini config -->
+              <div class="md:w-64 w-full bg-slate-900/70 border border-slate-800 rounded-xl p-3 text-xs">
+                <p class="text-[10px] font-semibold tracking-wide uppercase text-slate-400 mb-2">
+                  Advanced seating pattern
+                </p>
+
+                <div class="flex gap-3">
+                  <div class="flex-1">
+                    <label for="increment-by" class="block text-[11px] text-slate-300"> Increment by </label>
+                    <input
+                      type="number"
+                      id="increment-by"
+                      name="increment-by"
+                      class="mt-1 p-1.5 rounded bg-gray-800 text-white w-full border border-slate-700 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                      min="1"
+                      value="2"
+                    />
+                  </div>
+
+                  <div class="flex-1">
+                    <label for="increment-every" class="block text-[11px] text-slate-300"> Every n rows </label>
+                    <input
+                      type="number"
+                      id="increment-every"
+                      name="increment-every"
+                      class="mt-1 p-1.5 rounded bg-gray-800 text-white w-full border border-slate-700 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                      min="1"
+                      value="1"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="mt-2 inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 rounded-lg hover:bg-emerald-500 text-sm font-medium transition shadow-md hover:shadow-lg"
+            >
+              <span>Generate hall</span>
+            </button>
+          </form>
+        </section>
+
+        <!-- Hall / preview card -->
+        <section class="w-full bg-slate-900/60 border border-slate-800 rounded-2xl p-6 shadow-xl">
+          <h2 class="text-lg font-semibold mb-1">Hall preview</h2>
+
+          <div
+            id="hall-container"
+            class="flex flex-col rounded-xl bg-slate-900 border border-slate-800 h-80 overflow-y-auto p-3"
+          ></div>
+
+          <div id="results" class="mt-2 text-sm text-slate-200 space-y-1"></div>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
