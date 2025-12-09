@@ -48,10 +48,10 @@ window.onload = () => {
         const totalMinutes = airTime + currentTime;
         const hoursPassed = Math.floor(totalMinutes / 60) % 24;
         const minutesPassed = totalMinutes % 60;
-        //
+        // target rotation
         let newHourRot = hoursPassed * 30 + minutesPassed * 0.5;
         let newMinuteRot = minutesPassed * 6;
-        // --- CURRENT ROTATION FROM currentPost (already in degrees) ---
+        // set
         const currentHourRot = currentPost.hours;
         const currentMinuteRot = currentPost.minutes;
         // --- FORCE FORWARD ROTATION (always go to a larger degree value) ---

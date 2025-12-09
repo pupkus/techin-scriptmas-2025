@@ -101,7 +101,7 @@ window.onload = () => {
 
     resultDiv.innerHTML = `
       <p class="text-xs text-slate-400">
-        Time after delivery: <span class="font-semibold text-slate-100">${hh}:${mm}</span>
+        Santa will land at <span class="font-semibold text-slate-100">${hh}:${mm}</span>
       </p>
     `;
   }
