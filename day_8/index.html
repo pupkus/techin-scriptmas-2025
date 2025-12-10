@@ -36,11 +36,12 @@
                   name="length"
                   class="mt-1 p-1.5 rounded bg-gray-800 text-white w-full border border-slate-700 focus:outline-none focus:ring-1 focus:ring-emerald-500"
                   min="1"
-                  value="6"
+                  max="50"
+                  value="14"
                 />
               </div>
               <button
-                type="button"
+                type="submit"
                 id="control-button"
                 class="inline-flex items-center px-4 py-2 bg-emerald-600 rounded-lg hover:bg-emerald-500 text-sm font-medium transition shadow-md hover:shadow-lg"
               >
@@ -48,10 +49,7 @@
               </button>
             </div>
           </form>
-          <div
-            id="grid-display"
-            class="flex flex-row w-full justify-center"
-          ></div>
+          <div id="grid-display" class="grid w-full"></div>
         </section>
       </div>
     </main>
