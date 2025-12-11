@@ -56,9 +56,9 @@ export async function initiateMetadata() {
     const nav = document.querySelector("nav");
     if (!nav)
         return;
-    const data = await fetch("../nav.html");
+    let text = await (await fetch("../nav.html")).text();
+    nav.innerHTML = text;
     nav.classList.add("w-full", "py-6", "p-6", "bg-slate-900", "flex", "justify-between", "items-center", "text-center", "gap-4");
-    nav.innerHTML = await data.text();
     const back = document.getElementById("back");
     const forward = document.getElementById("forward");
     if (!back || !forward)

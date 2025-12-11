@@ -71,7 +71,9 @@ export async function initiateMetadata() {
   const nav = document.querySelector("nav") as HTMLElement | null;
   if (!nav) return;
 
-  const data = await fetch("../nav.html");
+  let text = await (await fetch("../nav.html")).text();
+  nav.innerHTML = text;
+
   nav.classList.add(
     "w-full",
     "py-6",
@@ -83,7 +85,6 @@ export async function initiateMetadata() {
     "text-center",
     "gap-4"
   );
-  nav.innerHTML = await data.text();
 
   const back = document.getElementById("back") as HTMLAnchorElement | null;
   const forward = document.getElementById("forward") as HTMLAnchorElement | null;
