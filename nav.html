@@ -1,37 +1,63 @@
-<a id="back">
-  <svg
-    class="w-6 h-6 text-teal-800 hover:text-teal-600 dark:text-white"
-    aria-hidden="true"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 8 14"
-  >
-    <path
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13"
-    />
-  </svg>
-</a>
+<!-- Left cluster: Back + Home -->
+<div class="flex items-center gap-4">
+  <!-- BACK -->
+  <a id="back" class="nav-btn">
+    <svg
+      class="w-6 h-6 text-teal-800 hover:text-teal-600 dark:text-white transition"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 8 14"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13"
+      />
+    </svg>
+  </a>
 
-<h1 id="page-title" class="md:text-3xl sm:text-lg font-bold"></h1>
-
-<a id="forward">
-  <svg
-    class="w-6 h-6 text-teal-800 hover:text-teal-600 dark:text-white"
-    aria-hidden="true"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 8 14"
-  >
-    <path
+  <!-- HOME -->
+  <a id="home" href="../" class="nav-btn">
+    <svg
+      class="w-6 h-6 text-teal-800 hover:text-teal-600 dark:text-white transition"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
       stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
       stroke-width="2"
-      d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"
-    />
-  </svg>
-</a>
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3 10.5 12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-10.5Z"
+      />
+    </svg>
+  </a>
+</div>
+
+<!-- TITLE -->
+<h1 id="page-title" class="font-bold text-center text-lg sm:text-xl md:text-3xl"></h1>
+
+<!-- Right cluster: Forward -->
+<div class="flex items-center">
+  <a id="forward" class="nav-btn">
+    <svg
+      class="w-6 h-6 text-teal-800 hover:text-teal-600 dark:text-white transition"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 8 14"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"
+      />
+    </svg>
+  </a>
+</div>
